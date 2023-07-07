@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch bubl</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <img id="bulb" src="img/offbulb-removebg-preview.png" alt="" class="center">
+   <button id="btntoggle" class="center">Turn on</button>
+   <script>
+    let btn=document.getElementById('btntoggle')
+    let bulb=document.getElementById('bulb')
+    btn.addEventListener('click',togglebulb)
+
+
+    function togglebulb(e){
+        if(btn.textContent.includes('on')){
+            bulb.src="img/onbulb-removebg-preview.png"
+            btn.textContent="Turn off"
+
+        }
+        else{
+            bulb.src="img/offbulb-removebg-preview.png"
+            btn.textContent="Turn on"
+        }
+    }
+   </script>
+</body>
+</html>
